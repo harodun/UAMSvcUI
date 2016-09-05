@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<title>User Registration Success</title>
+		<meta name="description" content="" />
+
+		<!-- mobile settings -->
+		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+
+		<!-- WEB FONTS -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&amp;subset=latin,latin-ext,cyrillic,cyrillic-ext" rel="stylesheet" type="text/css" />
+
+		<!-- CORE CSS -->
+		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		
+		<!-- THEME CSS -->
+		<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/uaScustom.css" rel="stylesheet" type="text/css" />
+		
+		<link href="assets/css/color_scheme/green.css" rel="stylesheet" type="text/css" id="color_scheme" />
+		
+	</head>
+	<!--
+		.boxed = boxed version
+	-->
+	
+	<body>
+	
+		<div class="padding-15">
+
+			<div class=" Reg-box ">
+					<div class="container">
+					<div class="col-md-6 col-md-offset-2 well">
+					<div class=" col-lg-12">
+					<div class="panel-heading text-center">
+											<i class="fa fa-check fa-5x regSuccessIconColor"></i>
+											<i > <p class="text-muted">
+							Your Account has been created. Please check your email for confirmation.<br />
+						</p></i>
+									</div>
+					</div>
+				</div>
+			</div>
+				
+
+			</div>
+
+		</div>
+	
+		<!-- JAVASCRIPT FILES -->
+		<script type="text/javascript">var plugin_path = 'assets/plugins/';</script>
+		<script type="text/javascript" src="assets/plugins/jquery/jquery-2.2.3.min.js"></script>
+		<script type="text/javascript" src="assets/js/app.js"></script>
+		<script type="text/javascript" src="assets/js/registerUser.js"></script>
+		<script type="text/javascript" src="assets/js/jquery.validate.js"></script>
+		<script type="text/javascript" src="assets/js/form2js.js"></script>
+		<script type="text/javascript" src="assets/js/js2form.js"></script>
+		<script type="text/javascript" src="assets/js/json2.js"></script>
+
+		<!-- PAGE LEVEL SCRIPTS -->
+		<script type="text/javascript">
+
+			/**
+				Checkbox on "I agree" modal Clicked!
+			**/
+			jQuery("#terms-agree").click(function(){
+				jQuery('#termsModal').modal('toggle');
+
+				// Check Terms and Conditions checkbox if not already checked!
+				if(!jQuery("#checked-agree").checked) {
+					jQuery("input.checked-agree").prop('checked', true);
+				}
+				
+			});
+		</script>
+
+	</body>
+</html>

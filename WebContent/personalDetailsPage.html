@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<title>User Registration</title>
+		<meta name="description" content="" />
+
+		<!-- mobile settings -->
+		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+
+		<!-- WEB FONTS -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&amp;subset=latin,latin-ext,cyrillic,cyrillic-ext" rel="stylesheet" type="text/css" />
+
+		<!-- CORE CSS -->
+		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		
+		<!-- THEME CSS -->
+		<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+		<link href="assets/plugins/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/uaScustom.css" rel="stylesheet" type="text/css" />
+		
+		<link href="assets/css/color_scheme/green.css" rel="stylesheet" type="text/css" id="color_scheme" />
+
+	</head>
+	<!--
+		.boxed = boxed version
+	-->
+	<body>
+		<div class="padding-15">
+
+			<div class=" Reg-box ">
+
+				<!--
+				<div class="alert alert-danger">Complete all fields!</div>
+				-->
+
+				<!-- registration form -->
+				<form method="post" id="personalDetailsForm" action="services/signUp" 	method="post" class="sky-form boxed" novalidate="novalidate">
+					<input type="hidden" id="userId" name="userId"/>
+					<input type="hidden" id="id" name="id"/>
+					<header><i class="fa fa-users"></i> Personal Details Page</header>
+					
+					<fieldset>		
+					
+						<p class="text-muted">
+							* All are Mandatory
+						</p>			
+							<div class="row">
+								<div class="col-md-6">
+									<label class="input">
+										<input type="text" placeholder="First name" id="firstName" name="firstName">
+									</label>
+								</div>
+								<div class="col col-md-6">
+									<label class="input">
+										<input type="text" placeholder="Last name" id="lastName" name="lastName">
+									</label>
+								</div>
+							</div>
+							<div class="row">
+								<!-- <div class="col-md-6">
+									<label class="input">
+										<input type="text" placeholder="SSN(999-99-9999)" id="ssn" name="ssn" maxlength="11">
+									</label>
+								</div> -->
+								<div class="col col-md-6">
+									<label class="input">
+										<input type="text" class="form-control datepicker" data-format="mm-dd-yyyy" data-lang="en" data-RTL="false"
+												placeholder="Date of Birth" id="dateOfBirth" name="dateOfBirth" >
+									</label>
+								</div>
+								
+								<div class="col col-md-6">
+									<label class="select">
+										<select class="form-control" id="gender" name="gender>
+											<option value="0" selected>Gender</option>
+											<option value="1">Male</option>
+											<option value="2">Female</option>
+										</select>
+										<i></i>
+									</label>
+								</div>
+								
+							</div>
+							
+							<div class="row">
+								<div class="col-md-6 form-group required">
+ 									<label class="input  control-label">
+										<input type="text" placeholder="SSN(999-99-9999)" id="ssn" name="ssn" maxlength="11" required="required">
+									</label>
+								</div>
+								<div class="col-md-6">
+									<label class="input">
+										<input type="text" placeholder="ClientId" id="clientId" name="clientId" maxlength="11">
+									</label>
+								</div>
+							</div>
+					</fieldset>
+					
+					<fieldset>
+						<p class="text-muted">
+							Please enter communication details
+						</p>
+						
+						<div class="row">
+															
+								<div class="col-md-6 required">
+									<label class="input">
+										<input type="text" placeholder="Phone number" id="phoneNumber" name="phoneNumber">
+									</label>
+								</div>
+							</div>
+						
+					
+					</fieldset>
+					
+					<fieldset>
+						<p class="text-muted">
+							Please enter communication address
+						</p>
+						
+						<div class="row">
+								<div class="col-md-6">
+									<label class="input">
+										<input type="text" placeholder="Address Line1" id="address[0].addressLine1" name="address[0].addressLine1">
+									</label>
+								</div>
+								
+								<div class="col-md-6">
+									<label class="input">
+										<input type="text" placeholder="Address Line2" id="address[0].addressLine2" name="address[0].addressLine2">
+									</label>
+								</div>
+							</div>
+							
+							<div class="row">
+								<div class="col-md-6">
+									<label class="input">
+										<input type="text" placeholder="City" id="address[0].city" name="address[0].city">
+									</label>
+								</div>
+								
+								<div class="col-md-2">
+									<label class="select">
+									<select class="form-control" id="address[0].state" name="address[0].state" >
+										<option value="">Select</option>
+										<OPTION VALUE="AL" TITLE="Alabama">Alabama</OPTION>
+										 <OPTION VALUE="AK" TITLE="Alaska">Alaska</OPTION>
+										 <OPTION VALUE="AZ" TITLE="Arizona">Arizona</OPTION>
+										 <OPTION VALUE="AR" TITLE="Arkansas">Arkansas</OPTION>
+										 <OPTION VALUE="CA" TITLE="California">California</OPTION>
+										 <OPTION VALUE="CO" TITLE="Colorado">Colorado</OPTION>
+										 <OPTION VALUE="CT" TITLE="Connecticut">Connecticut</OPTION>
+										 <OPTION VALUE="DE" TITLE="Delaware">Delaware</OPTION>
+										 <OPTION VALUE="DC" TITLE="District Of Columbia">District Of Columbia</OPTION>
+										 <OPTION VALUE="FL" TITLE="Florida">Florida</OPTION>
+										 <OPTION VALUE="GA" TITLE="Georgia">Georgia</OPTION>
+										 <OPTION VALUE="HI" TITLE="Hawaii">Hawaii</OPTION>
+										 <OPTION VALUE="ID" TITLE="Idaho">Idaho</OPTION>
+										 <OPTION VALUE="IL" TITLE="Illinois">Illinois</OPTION>
+										 <OPTION VALUE="IN" TITLE="Indiana">Indiana</OPTION>
+										 <OPTION VALUE="IA" TITLE="Iowa">Iowa</OPTION>
+										 <OPTION VALUE="KS" TITLE="Kansas">Kansas</OPTION>
+										 <OPTION VALUE="KY" TITLE="Kentucky">Kentucky</OPTION>
+										 <OPTION VALUE="LA" TITLE="Louisiana">Louisiana</OPTION>
+										 <OPTION VALUE="ME" TITLE="Maine">Maine</OPTION>
+										 <OPTION VALUE="MD" TITLE="Maryland">Maryland</OPTION>
+										 <OPTION VALUE="MA" TITLE="Massachusetts">Massachusetts</OPTION>
+										 <OPTION VALUE="MI" TITLE="Michigan">Michigan</OPTION>
+										 <OPTION VALUE="MN" TITLE="Minnesota">Minnesota</OPTION>
+										 <OPTION VALUE="MS" TITLE="Mississippi">Mississippi</OPTION>
+										 <OPTION VALUE="MO" TITLE="Missouri">Missouri</OPTION>
+										 <OPTION VALUE="MT" TITLE="Montana">Montana</OPTION>
+										 <OPTION VALUE="NE" TITLE="Nebraska">Nebraska</OPTION>
+										 <OPTION VALUE="NV" TITLE="Nevada">Nevada</OPTION>
+										 <OPTION VALUE="NH" TITLE="New Hampshire">New Hampshire</OPTION>
+										 <OPTION VALUE="NJ" TITLE="New Jersey">New Jersey</OPTION>
+										 <OPTION VALUE="NM" TITLE="New Mexico">New Mexico</OPTION>
+										 <OPTION VALUE="NY" TITLE="New York">New York</OPTION>
+										 <OPTION VALUE="NC" TITLE="North Carolina">North Carolina</OPTION>
+										 <OPTION VALUE="ND" TITLE="North Dakota">North Dakota</OPTION>
+										 <OPTION VALUE="OH" TITLE="Ohio">Ohio</OPTION>
+										 <OPTION VALUE="OK" TITLE="Oklahoma">Oklahoma</OPTION>
+										 <OPTION VALUE="OR" TITLE="Oregon">Oregon</OPTION>
+										 <OPTION VALUE="PA" TITLE="Pennsylvania">Pennsylvania</OPTION>
+										 <OPTION VALUE="RI" TITLE="Rhode Island">Rhode Island</OPTION>
+										 <OPTION VALUE="SC" TITLE="South Carolina">South Carolina</OPTION>
+										 <OPTION VALUE="SD" TITLE="South Dakota">South Dakota</OPTION>
+										 <OPTION VALUE="TN" TITLE="Tennessee">Tennessee</OPTION>
+										 <OPTION VALUE="TX" TITLE="Texas">Texas</OPTION>
+										 <OPTION VALUE="UT" TITLE="Utah">Utah</OPTION>
+										 <OPTION VALUE="VT" TITLE="Vermont">Vermont</OPTION>
+										 <OPTION VALUE="VA" TITLE="Virginia">Virginia</OPTION>
+										 <OPTION VALUE="WA" TITLE="Washington">Washington</OPTION>
+										 <OPTION VALUE="WV" TITLE="West Virginia">West Virginia</OPTION>
+										 <OPTION VALUE="WI" TITLE="Wisconsin">Wisconsin</OPTION>
+										 <OPTION VALUE="WY" TITLE="Wyoming">Wyoming</OPTION>
+										 <OPTION VALUE="GU" TITLE="Guam">Guam</OPTION>
+										 <OPTION VALUE="PR" TITLE="Puerto Rico">Puerto Rico</OPTION>
+										 <OPTION VALUE="VI" TITLE="Virgin Islands">Virgin Islands</OPTION>
+										 <OPTION VALUE="AS" TITLE="American Samoa">American Samoa</OPTION>
+										 <OPTION VALUE="FM" TITLE="Federated States of Micronesia">Federated States of Micronesia</OPTION>
+										 <OPTION VALUE="MH" TITLE="Marshall Islands">Marshall Islands</OPTION>
+										 <OPTION VALUE="MP" TITLE="Northern Mariana Islands">Northern Mariana Islands</OPTION>
+										 <OPTION VALUE="PW" TITLE="Palau">Palau</OPTION>
+										 </select>
+										<i></i>
+									</label>
+								</div>
+								
+								<div class="col-md-4">
+									<label class="input">
+										<input type="text" placeholder="zipCode" id="address[0].zipcode" name="address[0].zipcode">
+									</label>
+								</div>
+							</div>
+						
+					
+					</fieldset>
+						
+						
+					<!-- <fieldset>
+						<div class="row">
+							<div class="col-md-6">
+								<label class="input">
+									<input type="text" placeholder="First name">
+								</label>
+							</div>
+							<div class="col col-md-6">
+								<label class="input">
+									<input type="text" placeholder="Last name">
+								</label>
+							</div>
+						</div>
+
+						<label class="select">
+							<select>
+								<option value="0" selected disabled>Gender</option>
+								<option value="1">Male</option>
+								<option value="2">Female</option>
+								<option value="3">Other</option>
+							</select>
+							<i></i>
+						</label>
+						
+						<div class="margin-top20">
+							<label class="checkbox nomargin"><input class="checked-agree" type="checkbox" name="checkbox"><i></i>I agree to the <a href="#" data-toggle="modal" data-target="#termsModal">Terms of Service</a></label>
+							<label class="checkbox nomargin"><input type="checkbox" name="checkbox"><i></i>I want to receive news and  special offers</label>
+						</div>
+					</fieldset> -->
+
+					<footer>
+						<button type="submit" class="btn btn-primary pull-right" id="sinupPageSubmitBtn" ><i class="fa fa-check" ></i> Create Account</button>
+					</footer>
+
+				</form>
+				<!-- /registration form -->
+
+				<hr />
+
+			</div>
+
+		</div>
+		
+
+	
+		<!-- JAVASCRIPT FILES -->
+		<script type="text/javascript">var plugin_path = 'assets/plugins/';</script>
+		<script type="text/javascript" src="assets/plugins/jquery/jquery-2.2.3.min.js"></script>
+		<script type="text/javascript" src="assets/js/app.js"></script>
+		<script type="text/javascript" src="assets/js/jquery.validate.js"></script>
+		<script type="text/javascript" src="assets/js/form2js.js"></script>
+		<script type="text/javascript" src="assets/js/js2form.js"></script>
+		<script type="text/javascript" src="assets/js/json2.js"></script>
+		<script type="text/javascript" src="assets/js/custom.js"></script>
+		<script type="text/javascript" src="assets/js/personalDetailsPage.js"></script>
+
+		<!-- PAGE LEVEL SCRIPTS -->
+		<script type="text/javascript">
+
+			/**
+				Checkbox on "I agree" modal Clicked!
+			**/
+			jQuery("#terms-agree").click(function(){
+				jQuery('#termsModal').modal('toggle');
+
+				// Check Terms and Conditions checkbox if not already checked!
+				if(!jQuery("#checked-agree").checked) {
+					jQuery("input.checked-agree").prop('checked', true);
+				}
+				
+			});
+		</script>
+
+	</body>
+</html>

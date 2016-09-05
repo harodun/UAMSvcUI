@@ -1,0 +1,13 @@
+@CHARSET "ISO-8859-1";
+
+`.duplicateUserId {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: #RED;
+}
+
+.duplicateUserIdTextColor {
+ color: #a94442;
+}
+

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<title>Main</title>
+		<meta name="description" content="" />
+
+		<!-- mobile settings -->
+		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+
+		<!-- WEB FONTS -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&amp;subset=latin,latin-ext,cyrillic,cyrillic-ext" rel="stylesheet" type="text/css" />
+
+		<!-- CORE CSS -->
+		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		
+		<!-- THEME CSS -->
+		<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/uaScustom.css" rel="stylesheet" type="text/css" />
+		
+		<link href="assets/css/color_scheme/green.css" rel="stylesheet" type="text/css" id="color_scheme" />
+		
+</head>
+<body>
+	<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModal" aria-hidden="true">
+			<div class="modal-dialog">
+					<div class=" Reg-box ">
+					
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+							&times;
+						</button>
+						<h4 class="modal-title" id="myModal"><i class="fa fa-user"></i>Login</h4>
+					</div>
+					<form method="post" id="loginForm" action="services/signIn" 
+						method="post" class="sky-form boxed" novalidate="novalidate">
+						<div class="alert alert-danger" id="loginErrorDiv" style="display: none;">  </div>
+							<fieldset>	
+							
+								<section>
+									<label class="label">E-mail</label>
+									<label class="input">
+										<i class="icon-append fa fa-envelope"></i>
+										<input type="Enter registered Email Id" id = "userId" name= "userId">
+									</label>
+								</section>
+								
+								<section>
+									<label class="label">Password</label>
+									<label class="input">
+										<i class="icon-append fa fa-lock"></i>
+										<input type="password" id = "password" name= "password">
+									</label>
+									<label class="checkbox"><input type="checkbox" name="checkbox-inline" checked><i></i>Keep me logged in</label>
+								</section>
+								
+								<footer>
+								<button type="submit" class="btn btn-primary pull-right">Sign In</button>
+								<div class="forgot-password pull-left">
+									<a href="page-password.html">Forgot password?</a> <br />
+									<a href="registerUser.html"><b>Need to Register?</b></a>
+								</div>
+							</footer>
+		
+							</fieldset>
+					</form>
+					
+					</div>
+				</div>
+	</div>
+	
+		<script type="text/javascript">var plugin_path = 'assets/plugins/';</script>
+		<script type="text/javascript" src="assets/plugins/jquery/jquery-2.2.3.min.js"></script>
+		<script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.js"></script>
+		<script type="text/javascript" src="assets/js/app.js"></script>
+		<script type="text/javascript" src="assets/js/mainPage.js"></script>
+		<script type="text/javascript" src="assets/js/jquery.validate.js"></script>
+		<script type="text/javascript" src="assets/js/form2js.js"></script>
+		<script type="text/javascript" src="assets/js/js2form.js"></script>
+		<script type="text/javascript" src="assets/js/json2.js"></script>
+		
+</body>
+</html>
